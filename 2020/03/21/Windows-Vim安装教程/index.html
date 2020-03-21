@@ -12,7 +12,7 @@
 
 
 
-<title>Hello World | 新鲜的小肥狗的小窝</title>
+<title>Windows-Vim安装教程 | 新鲜的小肥狗的小窝</title>
 
 
 
@@ -107,73 +107,11 @@
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">Windows-Vim安装教程</h1>
             
                 <div class="post-meta">
                     
@@ -182,7 +120,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">三月 20, 2020&nbsp;&nbsp;20:09:06</a>
+                        Date: <a href="#">三月 21, 2020&nbsp;&nbsp;19:07:09</a>
                         </span>
                     
                     
@@ -191,19 +129,55 @@
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p>#Windows Vim 安装指南</p>
+<blockquote>
+<p>上一篇《C语言从入门到入土》中小肥狗使用了Vim编辑器写代码，有有一些小伙伴们在看完教程后跑过来问小肥狗Windows下要怎么装Vim，甚至扬言说不给教程就要取走小肥狗的狗头。于是乎，小肥狗想着好(小)人(命)做(要)到(紧)底(啊)，写了这篇教程来教大家怎么在Windows下使用Vim敲(去)代(装)码(X)。</p>
+</blockquote>
+<blockquote>
+<p>首先第一步当然是去<a href="https://www.vim.org/" target="_blank" rel="noopener">这里</a>下载最新版的Vim。进入界面后你会看到一堆又一堆的英文。不要慌，不懂英文没关系，左边有一个绿绿的Download在那里，点一下就能进入到下载界面啦。</p>
+</blockquote>
+<p><img src="/.com//VimDownload.jpg" alt></p>
+<blockquote>
+<p>点进去之后再点击 “PC:MS-DOS and MS-Windows” 这个选项跳转到另一个界面，然后再那个界面点击 “vim-win32-installer” 就可以下载vim的安装包啦！</p>
+</blockquote>
+<p><img src="/.com//DownloadVimChooise.jpg" alt><br><img src="/.com//DownloadGvim.jpg" alt></p>
+<blockquote>
+<p>下载完安装包后双击 “gvim82.exe” 打开安装界面，然后一路点next直到安装完毕。安装成功后桌面会出现一堆vim的快捷方式。</p>
+</blockquote>
+<p><img src="/.com//VimIcon.jpg" alt></p>
+<blockquote>
+<p>然后呢直接运行这些快捷方式？不不不，我们是要在CMD/Powershell运行才够装X，所以，当然是要在CMD里先来一句<code>vim -v</code>啦！，如果出现下图的界面，那么恭喜你，你的Vim安装完啦！</p>
+</blockquote>
+<p><img src="/.com//vim.jpg" alt></p>
+<blockquote>
+<p>如果不是，请接着往下看。</p>
+</blockquote>
+<blockquote>
+<p>一般情况下出现错误都是长这样的：<br><code>&#39;vim&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。</code></p>
+</blockquote>
+<p><img src="/.com//Error.jpg" alt></p>
+<blockquote>
+<p>这时候我们只需要把Vim目录添加到系统环境变量中去就可以了。</p>
+</blockquote>
+<blockquote>
+<p>首先先右键计算机 点 “属性”。如图：</p>
+</blockquote>
+<p><img src="/.com//Mathor.jpg" alt></p>
+<blockquote>
+<p>然后点击 “环境变量” → 点击 “Path” → 点击 “新建”</p>
+</blockquote>
+<p><img src="/.com//Path.jpg" alt></p>
+<blockquote>
+<p>变量名看你心情给，不过还是推荐老老实实填Vim叭。变量值填Vim的安装路径，如果是默认安装的话。64位系统填：</p>
+</blockquote>
+<p><code>C:\Program Files (x86)\vim\vim82</code></p>
+<blockquote>
+<p>32位的系统填：</p>
+</blockquote>
+<p><code>C:\Program Files (x86)\vim\vim82</code></p>
+<blockquote>
+<p>然后再去CMD执行 <code>vim -v</code> 会发现Vim已经能够正常运行了。</p>
+</blockquote>
 
         </div>
 
@@ -218,7 +192,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://yoursite.com/2020/03/20/hello-world/">http://yoursite.com/2020/03/20/hello-world/</a></span>
+                        <span><a href="http://yoursite.com/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">http://yoursite.com/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</a></span>
                     </p>
                 
                 
@@ -251,8 +225,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">Windows-Vim安装教程</a>
             
+            <a class="next" rel="next" href="/2020/03/20/hello-world/">Hello World</a>
             
         </section>
 
