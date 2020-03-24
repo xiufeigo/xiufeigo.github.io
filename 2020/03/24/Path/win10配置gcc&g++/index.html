@@ -12,7 +12,7 @@
 
 
 
-<title>Windows-Vim安装教程 | 新鲜的小肥狗的小窝</title>
+<title>Path/win10配置gcc&amp;g++ | 新鲜的小肥狗的小窝</title>
 
 
 
@@ -111,7 +111,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Windows-Vim安装教程</h1>
+            <h1 class="post-title">Path/win10配置gcc&amp;g++</h1>
             
                 <div class="post-meta">
                     
@@ -120,7 +120,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">marzo 21, 2020&nbsp;&nbsp;19:07:09</a>
+                        Date: <a href="#">marzo 24, 2020&nbsp;&nbsp;8:37:09</a>
                         </span>
                     
                     
@@ -129,26 +129,14 @@
         </header>
 
         <div class="post-content">
-            <p>上一篇《C语言从入门到入土》中小肥狗使用了Vim编辑器写代码，有有一些小伙伴们在看完教程后跑过来问小肥狗Windows下要怎么装Vim，甚至扬言说不给教程就要取走小肥狗的狗头。于是乎，小肥狗想着好(小)人(命)做(要)到(紧)底(啊)，写了这篇教程来教大家怎么在Windows下使用Vim敲(去)代(装)码(X)。</p>
-<p>首先第一步当然是去<a href="https://www.vim.org/" target="_blank" rel="noopener">这里</a>下载最新版的Vim。进入界面后你会看到一堆又一堆的英文。不要慌，不懂英文没关系，左边有一个绿绿的Download在那里，点一下就能进入到下载界面啦。</p>
-<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/VimDownload.jpg" alt></p>
-<p>点进去之后再点击 “PC:MS-DOS and MS-Windows” 这个选项跳转到另一个界面，然后再那个界面点击 “vim-win32-installer” 就可以下载vim的安装包啦！</p>
-<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/DownloadVimChooise.jpg" alt><br><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/DownloadGvim.jpg" alt></p>
-<p>下载完安装包后双击 “gvim82.exe” 打开安装界面，然后一路点next直到安装完毕。安装成功后桌面会出现一堆vim的快捷方式。</p>
-<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/VimIcon.jpg" alt></p>
-<p>然后呢直接运行这些快捷方式？不不不，我们是要在CMD/Powershell运行才够装X，所以，当然是要在CMD里先来一句<code>vim -v</code>啦！，如果出现下图的界面，那么恭喜你，你的Vim安装完啦！</p>
-<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/vim.jpg" alt></p>
-<p>如果不是，请接着往下看:</p>
-<p>一般情况下出现错误都是长这样的:<br>    <code>&#39;vim&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。</code></p>
-<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/Error.jpg" alt></p>
-<p>这时候我们只需要把Vim目录添加到系统环境变量中去就可以了。</p>
-<p>首先先右键计算机 点 “属性”。如图:</p>
-<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/Mathor.jpg" alt></p>
-<p>然后点击 “环境变量” → 点击 “Path” → 点击 “新建”</p>
-<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/Path.jpg" alt></p>
-<p>变量名看你心情给，不过还是推荐老老实实填Vim叭。变量值填Vim的安装路径，如果是默认安装的话。64位系统填:</p>
-<pre><code>`C:\Program Files (x86)\vim\vim82`</code></pre><p>32位的系统填:</p>
-<pre><code>`C:\Program Files (x86)\vim\vim82`</code></pre><p>然后再去CMD执行 <code>vim -v</code> 会发现Vim已经能够正常运行了。</p>
+            <p>在上一期“Windows-Vim安装教程”中教会了大家如何在Win10中使用Vim编辑器，但是新的问题又来了，小伙伴们发现使用Vim写完了代码后，在CMD执行 <code>gcc - o HelloWorld.exe HelloWorld.c</code> 时，编译器会提示 <code>&#39;gcc&#39; 不是内部或外部命令，也不是可运行的程序
+或批处理文件。</code> 这时候就有小伙伴懵住了，小肥狗你这不坑我嘛，我怎么没办法用这道命令啊！是不是你给的教程有毛病啊！对于这种情况小肥狗得先谢个罪，毕竟只给了你们如何安装Vim却没有教你们配置C语言代码环境，于是乎，迟到了n年的这一片“Win10配置gcc&amp;g++”就闪亮登场啦~<br>好了，废话不多说，再说命都没了~马上步入教程内容  </p>
+<hr>
+<p>###方法一<br>安装gcc的话有两种方法，一种是直接将其他自带gcc的软件添加到path中从而可以在CMD调用gcc，这样的软件有 “Dev C++” 等等。如果用这种方法的话直接跳到path环节将路径改成 “Dev C++” 的安装目录下的 “MinGW64” 下的 “bin”。例如默认安装路径就填：<br><code>C:\Program Files (x86)\Dev-Cpp\MinGW64\bin</code>  </p>
+<hr>
+<p>###方法二</p>
+<p>第二种方法的话就是使用mingw包来安装gcc等组件。安装gcc&amp;g++的第一步当然是要去官网下载安装包啊\！<a href="http://www.mingw.org" target="_blank" rel="noopener">（点我传送）</a>（tips：由于官网是国外的，所以跳转速度和下载速度感人）<br>进入安装网站后我们点击右上角的“Downloads”<br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/downloads.jpg" alt><br>点完之后在弹出的窗口里下拉 点击 “MinGW Installation Manager (mingw-get)”，如图：<br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/downloads1.jpg" alt><br>然后再在接下来的窗口里继续下拉，点击 “MinGW-Get Version 0.6.3 (Beta)”，如图<br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/.%5Cdownloads2.jpg" alt><br>然后再一次在弹出来的窗口里下拉，点击 “mingw-get-setup.exe”，如图<br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/downloads3.jpg" alt><br>其实，我可以给你们个下载直链的，啊哈哈哈哈哈哈哈哈哈哈，皮这一下很开心~ <a href="https://www.lanzous.com/iaknf6j" target="_blank" rel="noopener">链接</a><br>下载完了之后肯定是要安装吖<del>直接放图叭</del><br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/install.jpg" alt><br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/install1.jpg" alt><br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/install2.jpg" alt><br>进度条跑完后长这样，点Continue就行啦！<br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/install3.jpg" alt><br>安装完成后会打开主界面<br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/complete.jpg" alt><br>然后关掉这个界面，跟上期教程一样打开环境变量设置：<br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/path.jpg" alt><br><img src="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/path1.png" alt></p>
+<p>在里面填入刚才安装的mingw的安装路径，如果是默认安装的话填入<br>    <code>C:\MinGW\bin</code><br>然后保存退出。接下来打开CMD，输入<br>    <code>mingw-get --version</code><br>如果没有报错的话，就可以执行下面的指令。如果报错了，检查下path有没有填错或者重启下电脑。<br>    <code>mingw-get install gcc</code><br>      <code>mingw-get install g++</code><br>      <code>mingw-get install gdb</code><br>      <code>mingw-get install mingw32-make</code><br>等执行后在cmd输入<br>    <code>gcc -v</code><br>如果CMD没有提示错误的话说明安装成功啦!可以愉快的写C语言啦~  </p>
 
         </div>
 
@@ -163,7 +151,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://xiufeigo.github.io/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">https://xiufeigo.github.io/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</a></span>
+                        <span><a href="https://xiufeigo.github.io/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/">https://xiufeigo.github.io/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/</a></span>
                     </p>
                 
                 
@@ -200,10 +188,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/03/24/Path/win10%E9%85%8D%E7%BD%AEgcc&g++/">Path/win10配置gcc&g++</a>
+                <a class="prev" rel="prev" href="/2020/03/24/win10%E9%85%8D%E7%BD%AEgcc&g++/">win10配置gcc&g++</a>
             
             
-            <a class="next" rel="next" href="/2020/03/21/Path/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">Windows-Vim安装教程</a>
+            <a class="next" rel="next" href="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">Windows-Vim安装教程</a>
             
         </section>
 
