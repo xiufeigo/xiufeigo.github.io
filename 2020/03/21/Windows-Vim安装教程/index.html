@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="xiufeigo">
+
+
+
+
+
+<title>Windows-Vim安装教程 | 新鲜的小肥狗的小窝</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">xiufeigo&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">xiufeigo&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Windows-Vim安装教程</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">xiufeigo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">marzo 21, 2020&nbsp;&nbsp;19:07:09</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>上一篇《C语言从入门到入土》中小肥狗使用了Vim编辑器写代码，有有一些小伙伴们在看完教程后跑过来问小肥狗Windows下要怎么装Vim，甚至扬言说不给教程就要取走小肥狗的狗头。于是乎，小肥狗想着好(小)人(命)做(要)到(紧)底(啊)，写了这篇教程来教大家怎么在Windows下使用Vim敲(去)代(装)码(X)。</p>
+<p>首先第一步当然是去<a href="https://www.vim.org/" target="_blank" rel="noopener">这里</a>下载最新版的Vim。进入界面后你会看到一堆又一堆的英文。不要慌，不懂英文没关系，左边有一个绿绿的Download在那里，点一下就能进入到下载界面啦。</p>
+<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/VimDownload.jpg" alt></p>
+<p>点进去之后再点击 “PC:MS-DOS and MS-Windows” 这个选项跳转到另一个界面，然后再那个界面点击 “vim-win32-installer” 就可以下载vim的安装包啦！</p>
+<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/DownloadVimChooise.jpg" alt><br><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/DownloadGvim.jpg" alt></p>
+<p>下载完安装包后双击 “gvim82.exe” 打开安装界面，然后一路点next直到安装完毕。安装成功后桌面会出现一堆vim的快捷方式。</p>
+<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/VimIcon.jpg" alt></p>
+<p>然后呢直接运行这些快捷方式？不不不，我们是要在CMD/Powershell运行才够装X，所以，当然是要在CMD里先来一句<code>vim -v</code>啦！，如果出现下图的界面，那么恭喜你，你的Vim安装完啦！</p>
+<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/vim.jpg" alt></p>
+<p>如果不是，请接着往下看:</p>
+<p>一般情况下出现错误都是长这样的:<br>    <code>&#39;vim&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。</code></p>
+<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/Error.jpg" alt></p>
+<p>这时候我们只需要把Vim目录添加到系统环境变量中去就可以了。</p>
+<p>首先先右键计算机 点 “属性”。如图:</p>
+<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/Mathor.jpg" alt></p>
+<p>然后点击 “环境变量” → 点击 “Path” → 点击 “新建”</p>
+<p><img src="/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/Path.jpg" alt></p>
+<p>变量名看你心情给，不过还是推荐老老实实填Vim叭。变量值填Vim的安装路径，如果是默认安装的话。64位系统填:</p>
+<pre><code>`C:\Program Files (x86)\vim\vim82`</code></pre><p>32位的系统填:</p>
+<pre><code>`C:\Program Files (x86)\vim\vim82`</code></pre><p>然后再去CMD执行 <code>vim -v</code> 会发现Vim已经能够正常运行了。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>xiufeigo</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://xiufeigo.github.io/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">https://xiufeigo.github.io/2020/03/21/Windows-Vim%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Stay <strong>Hungry</strong>, Stay <strong>Foolish</strong>.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE/"># 环境设置</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/03/24/win10%E9%85%8D%E7%BD%AEgcc&g++/">win10配置gcc&g++</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© xiufeigo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
